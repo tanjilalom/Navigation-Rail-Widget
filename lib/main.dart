@@ -39,8 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
             selectedIndex: _selectedIndex,
             labelType: NavigationRailLabelType.all,
             backgroundColor: Colors.deepPurple[100],
-            groupAlignment: 0, //Top, Middle, Bottom
-            onDestinationSelected: (val){
+            elevation: 20,
+            onDestinationSelected: (val) {
               setState(() {
                 _selectedIndex = val;
               });
