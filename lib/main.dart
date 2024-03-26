@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_rail/page1.dart';
+import 'package:navigation_rail/page2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +33,11 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
+  final _pages = [
+    page1(),
+    page2(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -66,6 +73,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
+            Expanded(child: Container(
+              child: _pages[_selectedIndex],
+            ),),
           ],
         ),
       ),
